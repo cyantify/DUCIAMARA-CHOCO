@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Chocolate Shop</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel = "stylesheet" href= "ABDUL_AZIZ_YASSIN.css">
+
+    </head>
+    <body>
+        <section id = "header">
+            <a href="#"><img src="img/logo.jpg" class="logo" alt =""></a>
+        
+
+        <div>
+            <ul id = "navbar">
+
+                <li><a href="ABDUL_AZIZ_YASSIN.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class = "active" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+
+            </ul>
+        </div>
+        </section>
+
+         <section class = "cartinfo">
+            <h2>Your Cart</h2>
+            <p>Review the items in your cart before proceeding to checkout.</p>
+        <br>
+        </section>
+        <section class = "cartlist">
+            <table class = "carttable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id = "cart-list">
+
+                </tbody>
+            </table>
+
+            <p id = "empty-text">Your cart is empty.</p>
+            <h3 id = "cart-total">Total: RM0.00</h3>
+        </section>
+         <section class = "ordersummary" id = "order-summary">
+            <h2>Customer Details</h2>
+
+            <form id = "order-form">
+                <label for = "cust-name">Name</label>
+                <input type = "text" id = "cust-name" placeholder = "Enter your name" required>
+
+                <label for = "cust-phone">Phone Number</label>
+                <input type = "tel" id = "cust-phone" placeholder = "e.g. 012-3456789" required>
+
+                <label for = "cust-address">Address</label>
+                <textarea id = "cust-address" placeholder = "Enter your address" required></textarea>
+
+                <p id = "form-error"></p>
+                <button type = "submit">Submit</button>
+            </form>
+
+            <p id = "order-message"></p>
+        </section>
+    </body>
+    <footer class = "section-p1">
+            
+             
+            <div class ="copyright"><br>
+                <p>&copy; 2024 Chocolate Shop. All rights reserved.</p><br>
+                <p>Designed by Abdul Aziz Yassin</p>
+            </div>
+        </footer>
+        
+     <script src = "ABDUL_AZIZ_YASSIN.js"></script>
+    </body>
+
+
+
+</html>

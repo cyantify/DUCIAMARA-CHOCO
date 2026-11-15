@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Chocolate Shop</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel = "stylesheet" href= "ABDUL_AZIZ_YASSIN.css">
+
+    </head>
+    <body>
+        <section id = "header">
+            <a href="#"><img src="img/logo.jpg" class="logo" alt =""></a>
+        
+
+        <div>
+            <ul id = "navbar">
+
+                <li><a href="ABDUL_AZIZ_YASSIN.html">Home</a></li>
+                <li><a class = "active" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+
+            </ul>
+        </div>
+        </section>
+        <section id = "product1" class = "section-p1">
+            <div class = "pro-container">
+                <div class = "pro">
+                    <img src = "img/feature1.jpg">
+                    <div class = "desc">
+                        <span>Kinder Bueno</span>
+                        <h5>Milk Chocolate</h5>
+                        <h4>RM6.00</h4>
+                    </div>
+                    <a href = "cart.html"><i class = "fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class = "pro">
+                    <img src = "img/product1.jpg">
+                    <div class = "desc">
+                        <span>Cadbury</span>
+                        <h5>Caramel Chocolate</h5>
+                        <h4>RM8.00</h4>
+                    </div>
+                    <a href = "cart.html"><i class = "fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class = "pro">
+                    <img src = "img/product2.jpg">
+                    <div class = "desc">
+                        <span>Wonka Bar</span>
+                        <h5>Milk Chocolate</h5>
+                        <h4>RM7.00</h4>
+                    </div>
+                    <a href = "cart.html"><i class = "fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class = "pro">
+                    <img src = "img/product3.jpg">
+                    <div class = "desc">
+                        <span>KitKat</span>
+                        <h5>Cruncy Chocolate</h5>
+                        <h4>RM5.00</h4>
+                    </div>
+                    <a href = "cart.html"><i class = "fal fa-shopping-cart cart"></i></a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id = "discount">
+                <h2>Discounts</h2>
+                <p>up to 70% off on certain items</p><br>
+            </div>
+        </section>
+        <style>
+            .table {
+                border-collapse: collapse;
+                margin: 50px auto;
+                width: 100%;
+                max-width: 800px; 
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                justify-content: center;   
+                padding: 0 20px 60px;
+                text-align: center;
+                height: auto;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+
+            }
+            .table thead tr {
+                background-color: #5a3825;
+                color:#ffffff;
+                text-align: center;
+                font-weight: bold;
+
+            }
+
+            .table th, .table td {
+                padding: 12px 15px;
+                text-align: center;
+            }
+            .table tbody tr {
+                border-bottom: 1px solid #dddddd;
+
+            }
+            .table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+            .table tbody tr:last-of-type {
+                border-bottom: 2px solid #5a3825;
+            }
+            .table tbody tr.active-row {
+                font-weight: bold;
+                color: #5a3825;
+            }
+        </style>
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>Chocolates </th>
+                <th>Discounts </th>
+                <th>Price After Discount </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kinder Bueno</td>
+                <td>20%</td>
+                <td>RM4.80</td>
+                
+            </tr>
+            <tr>
+                <td>Cadbury</td>
+                <td>15%</td>
+                <td>RM6.80</td>
+                
+            </tr>
+            <tr class = "active-row">
+                <td>Wonka Bar</td>
+                <td>70%</td>
+                <td>RM2.10</td>
+                
+            </tr>
+            <tr>
+                <td>KitKat</td>
+                <td>25%</td>
+                <td>RM3.75</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    
+        <footer class = "section-p1">
+            
+             
+            <div class ="copyright"><br>
+                <p>&copy; 2024 Chocolate Shop. All rights reserved.</p><br>
+                <p>Designed by Abdul Aziz Yassin</p>
+            </div>
+        </footer>
+        
+     <script src = "ABDUL_AZIZ_YASSIN.js"></script>
+    </body>
+
+</html>
