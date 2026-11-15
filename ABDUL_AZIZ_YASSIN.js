@@ -1,13 +1,27 @@
 
+var discountPrices = {
+    "Kinder Bueno": 4.80,
+    "Cadbury": 6.80,
+    "Wonka Bar": 2.10,
+    "KitKat": 3.75
+};
+
+
 var cartButtons = document.querySelectorAll(".pro .cart");
 
 cartButtons.forEach(function (button) {
     button.parentElement.addEventListener("click", function () {
         var card = button.closest(".pro");
+        var brand = card.querySelector(".desc span").textContent.trim();
+
+        var price = parseFloat(card.querySelector(".desc h4").textContent.replace("RM", ""));
+        if (discountPrices[brand] !== undefined) {
+            price = discountPrices[brand];
+        }
 
         var item = {
-            name: card.querySelector(".desc span").textContent + " - " + card.querySelector(".desc h5").textContent,
-            price: parseFloat(card.querySelector(".desc h4").textContent.replace("RM", "")),
+            name: brand + " - " + card.querySelector(".desc h5").textContent,
+            price: price,
             img: card.querySelector("img").getAttribute("src")
         };
 
@@ -19,7 +33,7 @@ cartButtons.forEach(function (button) {
 
 
 var cartList = document.getElementById("cart-list");
-var orderDone = false;   // becomes true after the customer submits
+var orderDone = false;   
 
 if (cartList) {
     showCart();
@@ -45,7 +59,6 @@ function showCart() {
     cartList.innerHTML = rows;
     document.getElementById("cart-total").textContent = "Total: RM" + total.toFixed(2);
 
-
     if (cart.length === 0) {
         document.getElementById("empty-text").style.display = "block";
         document.querySelector(".carttable").style.display = "none";
@@ -55,6 +68,7 @@ function showCart() {
         document.querySelector(".carttable").style.display = "table";
         document.getElementById("cart-total").style.display = "block";
     }
+
 
     if (cart.length === 0 && !orderDone) {
         document.getElementById("order-summary").style.display = "none";
@@ -75,12 +89,13 @@ var orderForm = document.getElementById("order-form");
 
 if (orderForm) {
     orderForm.addEventListener("submit", function (event) {
-        event.preventDefault();   // stops the page from reloading
+        event.preventDefault();  
 
         var name = document.getElementById("cust-name").value.trim();
         var phone = document.getElementById("cust-phone").value.trim();
         var address = document.getElementById("cust-address").value.trim();
         var error = document.getElementById("form-error");
+
 
         if (name === "") {
             error.textContent = "Please enter your name.";
